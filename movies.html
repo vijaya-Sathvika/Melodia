@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodia Movie Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #05530d;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Gallery section styles */
+        .gallery {
+            display: flex;
+            gap: 80px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 150px;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .gallery-item p {
+            margin-top: 10px;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        /* Hide the video by default */
+        .gallery-item video {
+            display: none;
+            width: 300px;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #0c0c0b;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header from the home page -->
+    <header>
+        <h1>Melodia</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Movie Gallery Section -->
+    <section id="videos" class="section">
+        <h2>Melodia Movie Projects</h2>
+        <div class="gallery">
+            <div class="gallery-item" onclick="playVideo(this)">
+                <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/guntur-kaaram-et00310760-1686726453.jpg" alt="Guntur Kaaram">
+                <video controls>
+                    <source src="GunturKaaram.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Guntur Kaaram</p>
+            </div>
+            <div class="gallery-item" onclick="playVideo(this)">
+                <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/10/hi-nanna-001.jpg" alt="Hi-Nanna">
+                <video controls>
+                    <source src="Hi-Nanna.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Hi-Nanna</p>
+            </div>
+            <div class="gallery-item" onclick="playVideo(this)">
+                <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/mad-2023-et00370942-1695798072.jpg" alt="MAD">
+                <video controls>
+                    <source src="MAD.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>MAD</p>
+            </div>
+            <div class="gallery-item" onclick="playVideo(this)">
+                <img src="https://m.media-amazon.com/images/M/MV5BYWYwMWU2N2QtMjExOC00OWY1LTllYzEtYWZjYzZlY2IwMzVhXkEyXkFqcGdeQXVyNjE0ODgwMDA@._V1_.jpg" alt="Salaar">
+                <video controls>
+                    <source src="Salaar.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Salaar</p>
+            </div>
+            <div class="gallery-item" onclick="playVideo(this)">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzkzYWVkOTYtODc5OS00ZjhlLThhY2UtZjY4ZGIyZWFhZWE4XkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_.jpg" alt="Tillu">
+                <video controls>
+                    <source src="Tillu.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Tillu</p>
+            </div>
+            <div class="gallery-item" onclick="playVideo(this)">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTEwYjcxZmMtMDQxOS00YmUxLWI5ZDEtNDNlYzMzZmEwYzRkXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg" alt="Bhagavanth Kesari">
+                <video controls>
+                    <source src="Bhagavanth Kesari.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Bhagavanth Kesari</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer from the home page -->
+    <footer>
+        <p>&copy; 2024 Melodia. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function playVideo(element) {
+            // Hide the image
+            var img = element.querySelector('img');
+            img.style.display = 'none';
+
+            // Show the video
+            var video = element.querySelector('video');
+            video.style.display = 'block';
+
+            // Play the video
+            video.play();
+        }
+    </script>
+</body>
+</html>
