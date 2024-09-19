@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodia Music Albums</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: white;
+        }
+
+        header {
+            background-color: #05530d;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .albums-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .album {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .album:hover {
+            background-color: #e3e3e3;
+        }
+
+        .album h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        .content button {
+            width: 100%;
+            padding: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: rgb(2, 83, 56);
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .content button:hover {
+            background-color: aqua;
+        }
+
+        footer {
+            background-color: #0c0c0b;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Melodia</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Albums Section -->
+    <section>
+        <h1>Melodia Music Albums</h1>
+        <div class="albums-container">
+            <div class="album" onclick="toggleContent('album1-content')">
+                <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/murari-telugu-et00406082-1721984841.jpg" alt="Murari" width="150px" height="150px">
+                <h2>Murari</h2>
+                <div id="album1-content" class="content">
+                    <ul>
+                        <li><button onclick="playSong('Cheppamma Cheppamma.mp3')">Cheppamma Cheppamma</button></li>
+                        <li><button onclick="playSong('Ekkada Ekkada.mp3')">Ekkada Ekkada</button></li>
+                        <li><button onclick="playSong('Andaanike Aadanive.mp3')">Andaanike Aadanive</button></li>
+                        <li><button onclick="playSong('Bangaru Kalla.mp3')">Bangaru Kalla</button></li>
+                        <li><button onclick="playSong('Dum Dum Dum.mp3')">Dum Dum Dum</button></li>
+                        <li><button onclick="playSong('Alanati Ramachandrudu.mp3')">Alanati Ramachandrudu</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="album" onclick="toggleContent('album2-content')">
+                <img src="https://c.saavncdn.com/397/Sainikudu-Telugu-2006-20190225-500x500.jpg" alt="Sainikudu" width="150px" height="150px">
+                <h2>Sainikudu</h2>
+                <div id="album2-content" class="content">
+                    <ul>
+                        <li><button onclick="playSong('Orugalluke Pilaa.mp3')">Orugalluke Pilaa</button></li>
+                        <li><button onclick="playSong('Byla Bylamo.mp3')">Byla Bylamo</button></li>
+                        <li><button onclick="playSong('Maayera.mp3')">Maayera</button></li>
+                        <li><button onclick="playSong('Aadapilla.mp3')">Aadapilla</button></li>
+                        <li><button onclick="playSong('Sogasuchuda.mp3')">Sogasuchuda</button></li>
+                        <li><button onclick="playSong('Go..Go.mp3')">Go..Go</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="album" onclick="toggleContent('album3-content')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Pokiri_movie_poster.jpg" alt="Pokiri" width="150px" height="150px">
+                <h2>Pokiri</h2>
+                <div id="album3-content" class="content">
+                    <ul>
+                        <li><button onclick="playSong('Devuda.mp3')">Devuda</button></li>
+                        <li><button onclick="playSong('Dole Dole.mp3')">Dole Dole</button></li>
+                        <li><button onclick="playSong('Gala Gala.mp3')">Gala Gala</button></li>
+                        <li><button onclick="playSong('Ippatikinka.mp3')">Ippatikinka</button></li>
+                        <li><button onclick="playSong('Jagadame.mp3')">Jagadame</button></li>
+                        <li><button onclick="playSong('Choododdu.mp3')">Choododdu</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Player -->
+    <audio id="audioPlayer" controls>
+        <source id="audioSource" src="" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Melodia. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleContent(contentId) {
+            var content = document.getElementById(contentId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+
+        function playSong(song) {
+            var audioPlayer = document.getElementById('audioPlayer');
+            var audioSource = document.getElementById('audioSource');
+            
+            audioSource.src = song;
+            audioPlayer.load();
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
