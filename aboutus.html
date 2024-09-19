@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Melodia</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #05530d;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* About Us Section */
+        section.about-us {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section.about-us h1, section.about-us h2 {
+            color: #007BFF;
+            padding: 5px;
+            background-color: #e0f7fa;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p, ul {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            list-style-type: none;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            /*content: '✓';*/
+            position: absolute;
+            left: 0;
+            color: #007BFF;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0c0c0b;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section (same as homepage) -->
+    <header>
+        <h1>Melodia</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h1>About Us</h1>
+        <p>Welcome to Melodia, where music meets passion. Our story began with a simple idea: to create a platform that celebrates the beauty of music and brings people together.</p>
+
+        <h2>Our Mission</h2>
+        <p>At Melodia, we believe that music has the power to inspire, to heal, and to bring people together. Our mission is to provide a platform that fosters a community of music lovers, where they can share their passion, discover new artists, and connect with like-minded individuals.</p>
+
+        <h2>Our Team</h2>
+        <p>Our team is comprised of music enthusiasts who are dedicated to creating a unique and engaging experience for our users. With a combined passion for music, technology, and innovation, we strive to push the boundaries of what is possible and to create a platform that is truly exceptional.</p>
+
+        <h2>Our Values</h2>
+        <ul>
+            <li><strong>Passion</strong>: We are passionate about music and its ability to bring people together.</li>
+            <li><strong>Innovation</strong>: We believe in pushing the boundaries of what is possible and creating new experiences that inspire and delight.</li>
+            <li><strong>Community</strong>: We are committed to building a community that is inclusive, supportive, and passionate about music.</li>
+        </ul>
+
+        <h2>Get in Touch</h2>
+        <p>Want to learn more about Melodia or have a question about our platform? We'd love to hear from you. Contact us at <a href="mailto:info@melodia.com">info@melodia.com</a> and we'll get back to you soon.</p>
+    </section>
+
+    <!-- Footer  -->
+    <footer>
+        <p>&copy; 2024 My Music Streaming. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
